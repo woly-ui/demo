@@ -9,9 +9,40 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - uses: chrnorm/deployment-action@v1.2.0
+        name: Create GitHub Deployment
+        id: deployment
+        with:
+          token: '${{ github.token }}'
+          environment: demo
+
+      - uses: chrnorm/deployment-status@v1.0.0
+        name: Deployment progress
+        with:
+          token: '${{ github.token }}'
+          state: in_progress
+          deployment_id: ${{ steps.deployment.outputs.deployment_id }}
+
       - uses: actions/checkout@v1
       - uses: enriikke/gatsby-gh-pages-action@v2
         with:
           access-token: ${{ secrets.ACCESS_TOKEN }}
           deploy-branch: gh-pages
           gatsby-args: --prefix-paths
+
+      - uses: chrnorm/deployment-status@v1.0.0
+        name: Deployment success
+        if: success()
+        with:
+          token: '${{ github.token }}'
+          state: success
+          environment_url: https://woly-ui.github.io/demo
+          deployment_id: ${{ steps.deployment.outputs.deployment_id }}
+
+      - uses: chrnorm/deployment-status@v1.0.0
+        name: Deployment failure
+        if: failure()
+        with:
+          token: '${{ github.token }}'
+          state: failure
+          deployment_id: ${{ steps.deployment.outputs.deployment_id }}

@@ -1,0 +1,35 @@
+{
+  "name": "demo",
+  "private": true,
+  "description": "Demo page based on woly-ui components",
+  "version": "0.1.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "dependencies": {
+    "gatsby": "^2.24.61",
+    "gatsby-plugin-react-svg": "^3.0.0",
+    "normalize.css": "^8.0.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-is": "^16.13.1",
+    "styled-components": "^5.2.0",
+    "woly": "^0.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.10.0",
+    "gatsby-plugin-module-resolver": "^1.0.3",
+    "prettier": "2.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/woly-ui/demo"
+  }
+}

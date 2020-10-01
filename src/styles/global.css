@@ -1,0 +1,17 @@
+:root {
+    --main: #3c4b64;
+    --base: #eaedef;
+    --base-second: #d8dbe0;
+    --simple: #ffffff;
+    --danger: #e55353;
+    --warning: #f9b115;
+    --primary: #39f;
+    --accent: #321fdb;
+}
+
+html,
+body {
+    font-family: system-ui;
+    font-size: 14px;
+    color: var(--main);
+}

@@ -1,0 +1,52 @@
+{
+    "compilerOptions": {
+        "allowJs": false,
+        "allowSyntheticDefaultImports": true,
+        "baseUrl": "src",
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "jsx": "preserve",
+        "module": "esnext",
+        "lib": [
+            "ES2015",
+            "ES2016",
+            "ES2017",
+            "ES2018",
+            "ES2019",
+            "ES2020",
+            "ESNext",
+            "DOM",
+            "DOM.Iterable"
+        ],
+        "moduleResolution": "node",
+        "noImplicitAny": true,
+        "noEmit": true,
+        "target": "es2018",
+        "sourceMap": true,
+        "declaration": true,
+        "strict": true,
+        "strictNullChecks": true,
+        "skipLibCheck": true
+    },
+    "include": [
+        "src"
+    ],
+    "paths": {
+        "~/": [
+            "./"
+        ],
+        "lib": [
+            "./lib/"
+        ],
+        "icons": [
+            "./static/icons"
+        ],
+        "ui": [
+            "./ui/"
+        ]
+    },
+    "exclude": [
+        "./node_modules",
+        "./dist"
+    ]
+}

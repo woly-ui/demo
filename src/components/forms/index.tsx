@@ -68,43 +68,43 @@ const InputFieldWithValidator = reflect({
     },
 });
 
-// const SelectField = reflect({
-//     view: Select,
-//     bind: {
-//         value: citySelect.value.map((v) => v),
-//         options: citySelect.options,
-//         ...citySelect.handlers,
-//     },
-// });
+const SelectField = reflect({
+    view: Select,
+    bind: {
+        value: citySelect.value.map((v) => v),
+        options: citySelect.options,
+        ...citySelect.handlers,
+    },
+});
 
-// const TextCheckbox = reflect({
-//     view: Checkbox,
-//     bind: {
-//         label: 'Text checkbox',
-//         value: textCheckboxField.value.map((v) => v),
-//         ...textCheckboxField.handlers,
-//     },
-// });
+const TextCheckbox = reflect({
+    view: Checkbox,
+    bind: {
+        label: 'Text checkbox',
+        value: textCheckboxField.value.map((v) => v),
+        ...textCheckboxField.handlers,
+    },
+});
 
-// const TextDefaultCheckedCheckbox = reflect({
-//     view: Checkbox,
-//     bind: {
-//         label: 'Text checkbox default checked',
-//         value: textDefaultCheckedCheckboxField.value.map((v) => v),
-//         checked: textDefaultCheckedCheckboxField.value.map((v) => v.length),
-//         ...textDefaultCheckedCheckboxField.handlers,
-//     },
-// });
+const TextDefaultCheckedCheckbox = reflect({
+    view: Checkbox,
+    bind: {
+        label: 'Text checkbox default checked',
+        value: textDefaultCheckedCheckboxField.value.map((v) => v),
+        checked: textDefaultCheckedCheckboxField.value.map((v) => v.length),
+        ...textDefaultCheckedCheckboxField.handlers,
+    },
+});
 
-// const BooleanCheckbox = reflect({
-//     view: Checkbox,
-//     bind: {
-//         label: 'Boolean checkbox',
-//         value: booleanCheckboxField.value.map((v) => v),
-//         checked: booleanCheckboxField.value.map((v) => v),
-//         ...booleanCheckboxField.handlers,
-//     },
-// });
+const BooleanCheckbox = reflect({
+    view: Checkbox,
+    bind: {
+        label: 'Boolean checkbox',
+        value: booleanCheckboxField.value.map((v) => v),
+        checked: booleanCheckboxField.value.map((v) => v),
+        ...booleanCheckboxField.handlers,
+    },
+});
 
 const Result = reflect({
     view: styled.pre``,

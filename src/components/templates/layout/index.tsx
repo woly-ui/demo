@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-import { Global } from 'lib/box-styles';
+import { Global } from 'lib';
 import { HeaderPanel, Text, Box } from "woly";
 
 import { CustomerForm } from '../../forms';

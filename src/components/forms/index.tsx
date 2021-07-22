@@ -3,7 +3,7 @@ import { createEvent, createStore } from 'effector';
 import styled from 'styled-components';
 import { reflect } from '@effector/reflect';
 import { Input,  Checkbox, Button, Field, Heading, Box, BoxVertical } from 'woly';
-import { block } from '../../lib/box-styles';
+import { block } from '../../lib';
 
 import {
     $formData,

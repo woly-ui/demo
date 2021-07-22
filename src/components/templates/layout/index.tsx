@@ -2,59 +2,59 @@ import * as React from 'react';
 import styled from 'styled-components';
 
 import { Global } from 'lib/box-styles';
-import { Grid, Column, HeaderPanel, Text } from "woly";
+import { HeaderPanel, Text, Box } from "woly";
 
-interface LayoutProps {
-  sidebar?: React.ReactNode;
-  content?: React.ReactNode;
-}
+import { CustomerForm } from '../../forms';
 
-export const Layout: React.FC<LayoutProps> = ({ sidebar, content }) => {
-  const [isAsideHidden, setAsideHidden] = React.useReducer((is) => !is, false);
-  return (
-    <Global>
-      <Grid columns={12}>
-        <Column size={2}>
-          <Aside>{sidebar}</Aside>
-        </Column>
-        <Column size={10}>
-          <Page>
-            <HeaderPanel>
-              <div style={{ display: 'flex', padding: '10px' }}>
-                <a href="" target="" style={{ paddingRight: '10px' }}>
-                  <Text type="S">First Link</Text>
-                </a>
-                <a href="" target="" style={{ paddingRight: '10px' }}>
-                  <Text type="S">Second Link</Text>
-                </a>
-                <a href="" target="" style={{ paddingRight: '10px' }}>
-                  <Text type="S">Third Link</Text>
-                </a>
-              </div>
-            </HeaderPanel>
-
-          </Page>
-        </Column>
-      </Grid>
-    </Global>
-  )
-}
-
-const Aside = styled.div`
- background: var(--main);
-  --rounding: 0;
-  padding: 0;
-  width: 100%;
-  box-shadow: 0 2px 2px 0 rgba(60, 75, 100, 0.14),
-    0 3px 1px -2px rgba(60, 75, 100, 0.12), 0 1px 5px 0 rgba(60, 75, 100, 0.2);
-  display: block;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-`;
+export const Layout: React.FC = () => (
+  <Global>
+    <Page>
+      <HeaderBlock>
+        <NavBar>
+          <a href="" target="" style={{ paddingRight: '10px' }}>
+            <Box><Text type="S">First Link</Text></Box>
+          </a>
+          <a href="" target="" style={{ paddingRight: '10px' }}>
+            <Box><Text type="S">Second Link</Text></Box>
+          </a>
+          <a href="" target="" style={{ paddingRight: '10px' }}>
+            <Box><Text type="S">Third Link</Text></Box>
+          </a>
+        </NavBar>
+      </HeaderBlock>
+      <FormBlock>
+        <CustomerForm/>
+      </FormBlock>
+    </Page>
+  </Global>
+);
 
 const Page = styled.div`
-  background: var(--base);
-  flex: 1;
+  position: relative;
   width: 100%;
+  max-width: 1920px;
+  min-height: 100vh;
+  background: #F5F5F5;
+  
+`;
+
+const NavBar = styled.nav`
+  display: flex;
+  align-items: center;
+  padding: 10px;
+`;
+
+const HeaderBlock = styled(HeaderPanel)` 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-height: 60px;
+`;
+
+const FormBlock = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 60px;
 `;

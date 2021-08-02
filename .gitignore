@@ -122,6 +122,9 @@ typings/
 # vuepress build output
 .vuepress/dist
 
+# razzle.js build output
+build/
+
 # Serverless directories
 .serverless/
 

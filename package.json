@@ -17,6 +17,11 @@
     "lint:style": "stylelint './src/**/*.{js,css,ts,tsx}'"
   },
   "dependencies": {
+    "@eslint-kit/base": "^1.0.0",
+    "@eslint-kit/node": "^1.0.0",
+    "@eslint-kit/prettier": "^1.0.0",
+    "@eslint-kit/react": "^1.0.0",
+    "@eslint-kit/typescript": "^1.0.1",
     "reflect-form": "^0.1.2"
   },
   "peerDependencies": {

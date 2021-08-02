@@ -4,7 +4,6 @@
         "@eslint-kit/typescript",
         "@eslint-kit/node",
         "@eslint-kit/react",
-        "@eslint-kit/react-new-jsx-transform",
         "@eslint-kit/prettier",
         "./.config/eslint-config"
     ],

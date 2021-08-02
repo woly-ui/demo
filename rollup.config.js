@@ -50,7 +50,7 @@ export default [
             {
                 file: pkg.module,
                 format: 'es',
-                sourcemap: true,
+                sourcemap: 'inline',
             },
         ],
         plugins: [babelPlugin, resolverPlugin, commonjs(), terserPlugin],

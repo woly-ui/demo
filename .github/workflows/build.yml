@@ -21,7 +21,7 @@ jobs:
       - name: Build
         run: yarn build:demo
         env:
-          CI: true
+          CI: false
 
       - name: Test
         run: yarn test

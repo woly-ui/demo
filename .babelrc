@@ -1,0 +1,21 @@
+{
+    "presets": [
+        [
+            "@babel/preset-typescript"
+        ],
+        [
+            "@babel/preset-env",
+            {
+                "useBuiltIns": "usage",
+                "corejs": 3
+            }
+        ],
+        "patronum/babel-preset",
+        "@babel/preset-react"
+    ],
+    "plugins": [
+        [
+            "effector/babel-plugin"
+        ]
+    ]
+}

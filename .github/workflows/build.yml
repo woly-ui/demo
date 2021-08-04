@@ -1,0 +1,29 @@
+name: Node.js CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Use Node.js v14.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: v14.x
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Build
+        run: yarn build:demo
+        env:
+          CI: false
+
+      - name: Test
+        run: yarn test
+        env:
+          CI: true
